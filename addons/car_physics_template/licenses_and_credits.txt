@@ -1,0 +1,4 @@
+# all models, sounds and files are taken
+# sketchfab.com
+# opengameart.org
+# freesound.org

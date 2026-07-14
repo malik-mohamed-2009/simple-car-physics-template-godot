@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://23jw5hnhacck"]
 
-[ext_resource type="Script" uid="uid://d02hx7edmimi1" path="res://addons/car_physics_template/main_controller.gd" id="1_tshw1"]
+[ext_resource type="Script" uid="uid://d02hx7edmimi1" path="res://addons/car_physics_template/scripts/main_controller.gd" id="1_tshw1"]
 [ext_resource type="PackedScene" uid="uid://brvudl542dyva" path="res://addons/car_physics_template/car_models/main_body.tscn" id="2_2rsne"]
 [ext_resource type="PackedScene" uid="uid://cwsdfj6aac4c1" path="res://addons/car_physics_template/car_models/main_wheel.tscn" id="3_lvl2k"]
 [ext_resource type="AudioStream" uid="uid://dtwuwkwtma74d" path="res://addons/car_physics_template/audio/sfx_loop.wav" id="4_67cpg"]

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://brvudl542dyva"]
+
+[ext_resource type="PackedScene" uid="uid://dlghqo12moj6f" path="res://addons/car_physics_template/car_models/low_poly_mazda_rx-7.glb" id="1_ey3vp"]
+
+[node name="Sketchfab_Scene" unique_id=951370745 instance=ExtResource("1_ey3vp")]
+
+[node name="FR" parent="Sketchfab_model/648574f16ebd4fabba38774d8753917d_fbx/RootNode/RX-7" parent_id_path=PackedInt32Array(1446236959) index="6" unique_id=1457030853]
+visible = false
+
+[node name="BR" parent="Sketchfab_model/648574f16ebd4fabba38774d8753917d_fbx/RootNode/RX-7" parent_id_path=PackedInt32Array(1446236959) index="7" unique_id=2014166526]
+visible = false
+
+[node name="FL" parent="Sketchfab_model/648574f16ebd4fabba38774d8753917d_fbx/RootNode/RX-7" parent_id_path=PackedInt32Array(1446236959) index="8" unique_id=2030117199]
+visible = false
+
+[node name="BL" parent="Sketchfab_model/648574f16ebd4fabba38774d8753917d_fbx/RootNode/RX-7" parent_id_path=PackedInt32Array(1446236959) index="9" unique_id=267261614]
+visible = false

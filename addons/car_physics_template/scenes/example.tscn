@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://dej265244pn67"]
+
+[ext_resource type="PackedScene" uid="uid://23jw5hnhacck" path="res://addons/car_physics_template/scenes/car.tscn" id="1_1lw2r"]
+[ext_resource type="Texture2D" uid="uid://dbjndtwbqihfy" path="res://addons/car_physics_template/textures/grid.png" id="1_xu8sx"]
+[ext_resource type="Texture2D" uid="uid://cdbxpt4x648rc" path="res://icon.svg" id="2_ht3na"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6qx4q"]
+
+[sub_resource type="Sky" id="Sky_gyc6d"]
+sky_material = SubResource("ProceduralSkyMaterial_6qx4q")
+
+[sub_resource type="Environment" id="Environment_g7b7a"]
+background_mode = 2
+sky = SubResource("Sky_gyc6d")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_10y5o"]
+albedo_texture = ExtResource("1_xu8sx")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+texture_filter = 0
+
+[node name="Example" type="Node3D" unique_id=1311716753]
+
+[node name="Car" parent="." unique_id=58163010 instance=ExtResource("1_1lw2r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3799578, -10)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1131319062]
+environment = SubResource("Environment_g7b7a")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=894753357]
+transform = Transform3D(0.25881907, 0.31447467, -0.9133007, 0, 0.9455185, 0.32556814, 0.9659258, -0.08426324, 0.24471822, 0, 0, 0)
+shadow_enabled = true
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=781542544]
+
+[node name="AncLeft" type="Control" parent="UI" unique_id=1576439121]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+
+[node name="Left" type="TouchScreenButton" parent="UI/AncLeft" unique_id=777067902]
+position = Vector2(80, -184)
+texture_normal = ExtResource("2_ht3na")
+action = "ui_left"
+
+[node name="Right" type="TouchScreenButton" parent="UI/AncLeft" unique_id=56354955]
+position = Vector2(224, -184)
+texture_normal = ExtResource("2_ht3na")
+action = "ui_right"
+
+[node name="AncRight" type="Control" parent="UI" unique_id=46792651]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Throttle" type="TouchScreenButton" parent="UI/AncRight" unique_id=728996578]
+position = Vector2(-144, -176)
+texture_normal = ExtResource("2_ht3na")
+action = "ui_up"
+
+[node name="Reverse" type="TouchScreenButton" parent="UI/AncRight" unique_id=150712101]
+position = Vector2(-304, -176)
+texture_normal = ExtResource("2_ht3na")
+action = "ui_down"
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=1501867263]
+material_override = SubResource("StandardMaterial3D_10y5o")
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1082897846]
+size = Vector3(50, 0, 50)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D" unique_id=1913297854]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, -0.3, 0)
+height = 8.0
+sides = 16
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="CSGCombiner3D" unique_id=26710991]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, -0.3, 2)
+height = 8.0
+sides = 16
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="CSGCombiner3D" unique_id=1989327698]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, -0.3, 4)
+height = 8.0
+sides = 16
+
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="CSGCombiner3D" unique_id=807602026]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, -0.3, 6)
+height = 8.0
+sides = 16
+
+[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="CSGCombiner3D" unique_id=2095218404]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, -0.3, 8)
+height = 8.0
+sides = 16
+
+[node name="CSGCylinder3D6" type="CSGCylinder3D" parent="CSGCombiner3D" unique_id=1476372336]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, -0.3, 10)
+height = 8.0
+sides = 16

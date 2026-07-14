@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://23jw5hnhacck"]
+
+[ext_resource type="Script" uid="uid://d02hx7edmimi1" path="res://addons/car_physics_template/main_controller.gd" id="1_tshw1"]
+[ext_resource type="PackedScene" uid="uid://brvudl542dyva" path="res://addons/car_physics_template/car_models/main_body.tscn" id="2_2rsne"]
+[ext_resource type="PackedScene" uid="uid://cwsdfj6aac4c1" path="res://addons/car_physics_template/car_models/main_wheel.tscn" id="3_lvl2k"]
+[ext_resource type="AudioStream" uid="uid://dtwuwkwtma74d" path="res://addons/car_physics_template/audio/sfx_loop.wav" id="4_67cpg"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xu8sx"]
+friction = 0.4
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g7b7a"]
+size = Vector3(1.748, 1.121836, 4.318)
+
+[node name="Car" type="VehicleBody3D" unique_id=58163010]
+mass = 1000.0
+physics_material_override = SubResource("PhysicsMaterial_xu8sx")
+center_of_mass_mode = 1
+angular_damp = 1.0
+script = ExtResource("1_tshw1")
+
+[node name="Sketchfab_Scene" parent="." unique_id=951370745 instance=ExtResource("2_2rsne")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3701018, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=243800]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3643645, -0.018373013)
+shape = SubResource("BoxShape3D_g7b7a")
+debug_color = Color(0.5741307, 0.49637854, 0, 1)
+
+[node name="VehicleWheel3D" type="VehicleWheel3D" parent="." unique_id=382044957]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.80755234, 0, 1.3219693)
+use_as_traction = true
+use_as_steering = true
+wheel_radius = 0.34
+suspension_stiffness = 50.0
+damping_compression = 3.0
+damping_relaxation = 4.0
+
+[node name="Sketchfab_Scene" parent="VehicleWheel3D" unique_id=1529362770 instance=ExtResource("3_lvl2k")]
+
+[node name="VehicleWheel3D2" type="VehicleWheel3D" parent="." unique_id=1207412522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.808, 0, 1.322)
+use_as_traction = true
+use_as_steering = true
+wheel_radius = 0.34
+suspension_stiffness = 50.0
+damping_compression = 3.0
+damping_relaxation = 4.0
+
+[node name="Sketchfab_Scene" parent="VehicleWheel3D2" unique_id=307335660 instance=ExtResource("3_lvl2k")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="VehicleWheel3D3" type="VehicleWheel3D" parent="." unique_id=1587698109]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.808, 0, -1.1304574)
+use_as_traction = true
+wheel_radius = 0.34
+suspension_stiffness = 50.0
+damping_compression = 3.0
+damping_relaxation = 4.0
+
+[node name="Sketchfab_Scene" parent="VehicleWheel3D3" unique_id=1505013366 instance=ExtResource("3_lvl2k")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="VehicleWheel3D4" type="VehicleWheel3D" parent="." unique_id=649723613]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.808, 0, -1.1304574)
+use_as_traction = true
+wheel_radius = 0.34
+suspension_stiffness = 50.0
+damping_compression = 3.0
+damping_relaxation = 4.0
+
+[node name="Sketchfab_Scene" parent="VehicleWheel3D4" unique_id=833091324 instance=ExtResource("3_lvl2k")]
+
+[node name="Cam" type="SpringArm3D" parent="." unique_id=1621786645]
+transform = Transform3D(1, 0, 0, 0, 0.9848077, -0.17364818, 0, 0.17364818, 0.9848077, 0, 0, 0)
+top_level = true
+spring_length = -4.0
+
+[node name="Camera3D" type="Camera3D" parent="Cam" unique_id=1152714387]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="EngineSfx" type="AudioStreamPlayer3D" parent="." unique_id=1570776699]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.084684014, -1.0464635)
+stream = ExtResource("4_67cpg")
+unit_size = 24.0
+max_db = 6.0
+autoplay = true
+max_distance = 150.0
+
+[node name="Headlight" type="SpotLight3D" parent="." unique_id=1318124321]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.29834843, 2.0854144)
+visible = false
+spot_range = 11.24
+spot_attenuation = -0.35
+spot_angle = 59.81
+spot_angle_attenuation = 0.34150916

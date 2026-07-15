@@ -9,3 +9,5 @@
 # Xfce 4 - xfce.org
 # Inkscape - inkscape.org
 # Audacity - audacityteam.org
+# opengameart.org
+# freesound.org

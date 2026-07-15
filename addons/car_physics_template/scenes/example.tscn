@@ -2,7 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://23jw5hnhacck" path="res://addons/car_physics_template/scenes/car.tscn" id="1_1lw2r"]
 [ext_resource type="Texture2D" uid="uid://dbjndtwbqihfy" path="res://addons/car_physics_template/textures/grid.png" id="1_xu8sx"]
-[ext_resource type="Texture2D" uid="uid://cdbxpt4x648rc" path="res://icon.svg" id="2_ht3na"]
+[ext_resource type="Texture2D" uid="uid://vp0elgdf7tch" path="res://addons/car_physics_template/icons/arrow_button.svg" id="2_10y5o"]
+[ext_resource type="Script" uid="uid://cym552bo54bq7" path="res://addons/car_physics_template/scripts/dashboard.gd" id="2_n8vxc"]
+[ext_resource type="Texture2D" uid="uid://da6akhtbwx52e" path="res://addons/car_physics_template/icons/arrow_button_pressed.svg" id="3_n8vxc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6qx4q"]
 
@@ -32,6 +34,7 @@ transform = Transform3D(0.25881907, 0.31447467, -0.9133007, 0, 0.9455185, 0.3255
 shadow_enabled = true
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=781542544]
+script = ExtResource("2_n8vxc")
 
 [node name="AncLeft" type="Control" parent="UI" unique_id=1576439121]
 layout_mode = 3
@@ -41,14 +44,21 @@ anchor_bottom = 1.0
 grow_vertical = 0
 
 [node name="Left" type="TouchScreenButton" parent="UI/AncLeft" unique_id=777067902]
-position = Vector2(80, -184)
-texture_normal = ExtResource("2_ht3na")
+position = Vector2(160, -40.00001)
+rotation = 3.1415927
+scale = Vector2(0.2644628, 0.2644628)
+texture_normal = ExtResource("2_10y5o")
+texture_pressed = ExtResource("3_n8vxc")
 action = "ui_left"
+visibility_mode = 1
 
 [node name="Right" type="TouchScreenButton" parent="UI/AncLeft" unique_id=56354955]
-position = Vector2(224, -184)
-texture_normal = ExtResource("2_ht3na")
+position = Vector2(184, -168)
+scale = Vector2(0.264, 0.264)
+texture_normal = ExtResource("2_10y5o")
+texture_pressed = ExtResource("3_n8vxc")
 action = "ui_right"
+visibility_mode = 1
 
 [node name="AncRight" type="Control" parent="UI" unique_id=46792651]
 layout_mode = 3
@@ -62,14 +72,34 @@ grow_horizontal = 0
 grow_vertical = 0
 
 [node name="Throttle" type="TouchScreenButton" parent="UI/AncRight" unique_id=728996578]
-position = Vector2(-144, -176)
-texture_normal = ExtResource("2_ht3na")
+position = Vector2(-128, -192)
+rotation = -1.5707964
+scale = Vector2(0.264, 0.264)
+texture_normal = ExtResource("2_10y5o")
+texture_pressed = ExtResource("3_n8vxc")
 action = "ui_up"
+visibility_mode = 1
 
 [node name="Reverse" type="TouchScreenButton" parent="UI/AncRight" unique_id=150712101]
-position = Vector2(-304, -176)
-texture_normal = ExtResource("2_ht3na")
+position = Vector2(0, -168)
+rotation = 1.5707964
+scale = Vector2(0.264, 0.264)
+texture_normal = ExtResource("2_10y5o")
+texture_pressed = ExtResource("3_n8vxc")
 action = "ui_down"
+visibility_mode = 1
+
+[node name="SpmLabel" type="Label" parent="UI" unique_id=599852072]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -224.0
+offset_top = 16.0
+offset_right = -32.0
+offset_bottom = 106.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 65
+text = "Speed"
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=1501867263]
 material_override = SubResource("StandardMaterial3D_10y5o")
@@ -107,3 +137,5 @@ sides = 16
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, -0.3, 10)
 height = 8.0
 sides = 16
+
+[connection signal="speed_changed" from="Car" to="UI" method="_on_car_speed_changed"]

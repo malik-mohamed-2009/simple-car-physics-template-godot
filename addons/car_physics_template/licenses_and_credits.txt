@@ -1,0 +1,11 @@
+# all models, sounds and files are taken
+# sketchfab.com
+# flaticon.com
+# freesound.org
+# opengameart.org
+
+# software used
+# Termux - termux.dev
+# Xfce 4 - xfce.org
+# Inkscape - inkscape.org
+# Audacity - audacityteam.org

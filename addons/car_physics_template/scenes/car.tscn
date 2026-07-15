@@ -15,6 +15,7 @@ size = Vector3(1.748, 1.121836, 4.318)
 mass = 1000.0
 physics_material_override = SubResource("PhysicsMaterial_xu8sx")
 center_of_mass_mode = 1
+linear_damp = 0.1
 angular_damp = 1.0
 script = ExtResource("1_tshw1")
 

@@ -1,13 +1,12 @@
 # all models, sounds and files are taken
-# sketchfab.com
-# flaticon.com
-# freesound.org
-# opengameart.org
+# Sketchfab - sketchfab.com
+# Flaticon by Freepik - flaticon.com
+# Freesound - freesound.org
+# OGA - opengameart.org
 
 # software used
-# Termux - termux.dev
+# Termux, X11 and API - termux.dev
 # Xfce 4 - xfce.org
+# GIMP - gimp.org
 # Inkscape - inkscape.org
 # Audacity - audacityteam.org
-# opengameart.org
-# freesound.org

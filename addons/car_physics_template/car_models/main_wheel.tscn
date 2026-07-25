@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cwsdfj6aac4c1"]
+
+[ext_resource type="PackedScene" uid="uid://dlghqo12moj6f" path="res://addons/car_physics_template/car_models/low_poly_mazda_rx-7.glb" id="1_42m4o"]
+
+[node name="Sketchfab_Scene" unique_id=951370745 instance=ExtResource("1_42m4o")]
+
+[node name="RX-7_CarPaint_0" parent="Sketchfab_model/648574f16ebd4fabba38774d8753917d_fbx/RootNode/RX-7" parent_id_path=PackedInt32Array(1446236959) index="0" unique_id=2066204389]
+visible = false
+
+[node name="RX-7_Window_0" parent="Sketchfab_model/648574f16ebd4fabba38774d8753917d_fbx/RootNode/RX-7" parent_id_path=PackedInt32Array(1446236959) index="1" unique_id=860453937]
+visible = false
+
+[node name="RX-7_Plastic_0" parent="Sketchfab_model/648574f16ebd4fabba38774d8753917d_fbx/RootNode/RX-7" parent_id_path=PackedInt32Array(1446236959) index="2" unique_id=1777165484]
+visible = false
+
+[node name="RX-7_FrontLights_0" parent="Sketchfab_model/648574f16ebd4fabba38774d8753917d_fbx/RootNode/RX-7" parent_id_path=PackedInt32Array(1446236959) index="3" unique_id=1544529555]
+visible = false
+
+[node name="RX-7_RearLights_0" parent="Sketchfab_model/648574f16ebd4fabba38774d8753917d_fbx/RootNode/RX-7" parent_id_path=PackedInt32Array(1446236959) index="4" unique_id=1156150427]
+visible = false
+
+[node name="RX-7_Rims_0" parent="Sketchfab_model/648574f16ebd4fabba38774d8753917d_fbx/RootNode/RX-7" parent_id_path=PackedInt32Array(1446236959) index="5" unique_id=840873538]
+visible = false
+
+[node name="FR" parent="Sketchfab_model/648574f16ebd4fabba38774d8753917d_fbx/RootNode/RX-7" parent_id_path=PackedInt32Array(1446236959) index="6" unique_id=1457030853]
+transform = Transform3D(1, 0, 0, 0, 1, 2.646978e-23, 0, -2.646978e-23, 1, 0, 0, 0)
+
+[node name="FR_Wheel_Rims_0" parent="Sketchfab_model/648574f16ebd4fabba38774d8753917d_fbx/RootNode/RX-7/FR" index="0" unique_id=487149285]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="FR_Wheel_Plastic_0" parent="Sketchfab_model/648574f16ebd4fabba38774d8753917d_fbx/RootNode/RX-7/FR" index="1" unique_id=324444076]
+transform = Transform3D(-1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="BR" parent="Sketchfab_model/648574f16ebd4fabba38774d8753917d_fbx/RootNode/RX-7" parent_id_path=PackedInt32Array(1446236959) index="7" unique_id=2014166526]
+visible = false
+
+[node name="FL" parent="Sketchfab_model/648574f16ebd4fabba38774d8753917d_fbx/RootNode/RX-7" parent_id_path=PackedInt32Array(1446236959) index="8" unique_id=2030117199]
+visible = false
+
+[node name="BL" parent="Sketchfab_model/648574f16ebd4fabba38774d8753917d_fbx/RootNode/RX-7" parent_id_path=PackedInt32Array(1446236959) index="9" unique_id=267261614]
+visible = false

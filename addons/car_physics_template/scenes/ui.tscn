@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://b04wxrh6o2yfe"]
+
+[ext_resource type="Texture2D" uid="uid://vp0elgdf7tch" path="res://addons/car_physics_template/icons/arrow_button.svg" id="2_kl05s"]
+[ext_resource type="Texture2D" uid="uid://da6akhtbwx52e" path="res://addons/car_physics_template/icons/arrow_button_pressed.svg" id="3_i48sy"]
+
+[node name="UI" type="CanvasLayer" unique_id=1229424668]
+
+[node name="AncLeft" type="Control" parent="." unique_id=349717794]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+
+[node name="Left" type="TouchScreenButton" parent="AncLeft" unique_id=1306169602]
+position = Vector2(168.00002, -40.00001)
+rotation = 3.1415927
+scale = Vector2(0.2644628, 0.2644628)
+texture_normal = ExtResource("2_kl05s")
+texture_pressed = ExtResource("3_i48sy")
+action = "steer_left"
+visibility_mode = 1
+
+[node name="Right" type="TouchScreenButton" parent="AncLeft" unique_id=954865371]
+position = Vector2(192, -168)
+scale = Vector2(0.264, 0.264)
+texture_normal = ExtResource("2_kl05s")
+texture_pressed = ExtResource("3_i48sy")
+action = "steer_right"
+visibility_mode = 1
+
+[node name="AncRight" type="Control" parent="." unique_id=656056387]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Throttle" type="TouchScreenButton" parent="AncRight" unique_id=1282473275]
+position = Vector2(-168, -192)
+rotation = -1.5707964
+scale = Vector2(0.264, 0.264)
+texture_normal = ExtResource("2_kl05s")
+texture_pressed = ExtResource("3_i48sy")
+action = "throttle"
+visibility_mode = 1
+
+[node name="Brake" type="TouchScreenButton" parent="AncRight" unique_id=1500957124]
+position = Vector2(-40, -168)
+rotation = 1.5707964
+scale = Vector2(0.264, 0.264)
+texture_normal = ExtResource("2_kl05s")
+texture_pressed = ExtResource("3_i48sy")
+action = "brake"
+visibility_mode = 1

@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://23jw5hnhacck" path="res://addons/car_physics_template/scenes/car.tscn" id="1_1lw2r"]
 [ext_resource type="Texture2D" uid="uid://dbjndtwbqihfy" path="res://addons/car_physics_template/textures/grid.png" id="1_xu8sx"]
 [ext_resource type="PackedScene" uid="uid://b04wxrh6o2yfe" path="res://addons/car_physics_template/scenes/ui.tscn" id="2_1lw2r"]
+[ext_resource type="Script" uid="uid://bq0mniinjibb" path="res://addons/car_physics_template/scripts/main_camera.gd" id="2_w3862"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w4ui8"]
 
@@ -28,6 +29,14 @@ texture_filter = 0
 [node name="Car" parent="." unique_id=58163010 instance=ExtResource("1_1lw2r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.33, -8)
 engine_start = true
+
+[node name="CarCamera" type="SpringArm3D" parent="." unique_id=1494704968]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.98480767, -0.17364818, 0, 0.17364816, 0.9848077, 0, 1, -8)
+spring_length = -4.0
+script = ExtResource("2_w3862")
+
+[node name="Camera3D" type="Camera3D" parent="CarCamera" unique_id=1336539228]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -4)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1131319062]
 environment = SubResource("Environment_g7b7a")
@@ -87,15 +96,6 @@ shape = SubResource("BoxShape3D_g7b7a")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Example/RigidBody3D5/CollisionShape3D" unique_id=94291051]
 mesh = SubResource("BoxMesh_g7b7a")
 
-[node name="RigidBody3D6" type="RigidBody3D" parent="Example" unique_id=2061757992]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 16)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Example/RigidBody3D6" unique_id=235427698]
-shape = SubResource("BoxShape3D_g7b7a")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Example/RigidBody3D6/CollisionShape3D" unique_id=1101896731]
-mesh = SubResource("BoxMesh_g7b7a")
-
 [node name="RigidBody3D7" type="RigidBody3D" parent="Example" unique_id=1029567006]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 1, 16)
 
@@ -107,6 +107,14 @@ mesh = SubResource("BoxMesh_g7b7a")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Example" unique_id=1082897846]
 size = Vector3(50, 0, 50)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Example" unique_id=1336044326]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 50)
+size = Vector3(8, 0, 50)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Example" unique_id=1837164310]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 575)
+size = Vector3(1000, 0, 1000)
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="Example" unique_id=1913297854]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, -0.3, 0)
@@ -141,3 +149,5 @@ sides = 16
 [node name="CSGBox3D2" type="CSGBox3D" parent="Example" unique_id=1260383861]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 1.5, 3.5)
 size = Vector3(8, 4, 8)
+
+[connection signal="cam_connect" from="Car" to="CarCamera" method="_on_car_cam_connect"]

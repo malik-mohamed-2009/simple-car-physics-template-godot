@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://d02hx7edmimi1" path="res://addons/car_physics_template/scripts/main_controller.gd" id="1_tshw1"]
 [ext_resource type="PackedScene" uid="uid://brvudl542dyva" path="res://addons/car_physics_template/car_models/main_body.tscn" id="2_2rsne"]
 [ext_resource type="PackedScene" uid="uid://cwsdfj6aac4c1" path="res://addons/car_physics_template/car_models/main_wheel.tscn" id="3_lvl2k"]
-[ext_resource type="AudioStream" uid="uid://db4a7isjnxp8k" path="res://addons/car_physics_template/audio/sfx_loop_2.wav" id="4_tshw1"]
+[ext_resource type="AudioStream" uid="uid://dtwuwkwtma74d" path="res://addons/car_physics_template/audio/sfx_loop.wav" id="4_tshw1"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xu8sx"]
 friction = 0.4
@@ -18,10 +18,10 @@ center_of_mass_mode = 1
 linear_damp = 0.01
 angular_damp = 1.0
 script = ExtResource("1_tshw1")
-force_value = 1269
+force_value = 987
 gear_situation = [0, 0, 31, 72, 108, 151]
-engine_audio_idle = 0.748
-energetic_speed = 2.04
+engine_audio_idle = 0.821
+energetic_speed = 2.005
 
 [node name="Body" type="CollisionShape3D" parent="." unique_id=821472349]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -0.3701018, 0)
@@ -81,11 +81,3 @@ unit_size = 24.0
 max_db = 6.0
 autoplay = true
 max_distance = 150.0
-
-[node name="Cam" type="SpringArm3D" parent="." unique_id=1621786645]
-transform = Transform3D(1, 0, 0, 0, 0.9848077, -0.17364818, 0, 0.17364818, 0.9848077, 0, 0, 0)
-top_level = true
-spring_length = -4.0
-
-[node name="Camera3D" type="Camera3D" parent="Cam" unique_id=1152714387]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)

@@ -18,7 +18,7 @@ rotation = 3.1415927
 scale = Vector2(0.2644628, 0.2644628)
 texture_normal = ExtResource("2_kl05s")
 texture_pressed = ExtResource("3_i48sy")
-action = "steer_left"
+action = "ui_left"
 visibility_mode = 1
 
 [node name="Right" type="TouchScreenButton" parent="AncLeft" unique_id=954865371]
@@ -26,7 +26,7 @@ position = Vector2(192, -168)
 scale = Vector2(0.264, 0.264)
 texture_normal = ExtResource("2_kl05s")
 texture_pressed = ExtResource("3_i48sy")
-action = "steer_right"
+action = "ui_right"
 visibility_mode = 1
 
 [node name="AncRight" type="Control" parent="." unique_id=656056387]
@@ -45,7 +45,7 @@ rotation = -1.5707964
 scale = Vector2(0.264, 0.264)
 texture_normal = ExtResource("2_kl05s")
 texture_pressed = ExtResource("3_i48sy")
-action = "throttle"
+action = "ui_up"
 visibility_mode = 1
 
 [node name="Brake" type="TouchScreenButton" parent="AncRight" unique_id=1500957124]
@@ -54,5 +54,5 @@ rotation = 1.5707964
 scale = Vector2(0.264, 0.264)
 texture_normal = ExtResource("2_kl05s")
 texture_pressed = ExtResource("3_i48sy")
-action = "brake"
+action = "ui_down"
 visibility_mode = 1

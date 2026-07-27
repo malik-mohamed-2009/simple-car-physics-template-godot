@@ -21,9 +21,9 @@ var gear: int
 signal cam_connect
 
 func _physics_process(delta: float) -> void:
-	engine_force = Input.get_axis("brake", "throttle") * get_forced
+	engine_force = Input.get_axis("ui_down", "ui_up") * get_forced
 	
-	steer_input = Input.get_axis("steer_right", "steer_left")
+	steer_input = Input.get_axis("ui_right", "ui_left")
 	steering = move_toward(steering, steer_input * deg_to_rad(25), 0.04)
 	
 	speed_kmh = linear_velocity.length() * 3.6

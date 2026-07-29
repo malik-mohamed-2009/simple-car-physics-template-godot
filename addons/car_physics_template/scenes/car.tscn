@@ -24,14 +24,14 @@ engine_audio_idle = 0.821
 energetic_speed = 2.005
 
 [node name="Body" type="CollisionShape3D" parent="." unique_id=821472349]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -0.3701018, 0)
+transform = Transform3D(-1, 8.742278e-08, 3.821371e-15, 0, -4.371139e-08, 1, 8.742278e-08, 1, 4.371139e-08, 0, -0.3701018, 0)
 shape = SubResource("ConvexPolygonShape3D_tshw1")
 
 [node name="Model" parent="Body" unique_id=951370745 instance=ExtResource("2_2rsne")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 
 [node name="VehicleWheel3D" type="VehicleWheel3D" parent="." unique_id=382044957]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.80755234, 0, 1.3219693)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.808, 0, -1.322)
 use_as_traction = true
 use_as_steering = true
 wheel_radius = 0.34
@@ -40,9 +40,10 @@ damping_compression = 3.0
 damping_relaxation = 4.0
 
 [node name="Sketchfab_Scene" parent="VehicleWheel3D" unique_id=1529362770 instance=ExtResource("3_lvl2k")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="VehicleWheel3D2" type="VehicleWheel3D" parent="." unique_id=1207412522]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.808, 0, 1.322)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.808, 0, -1.322)
 use_as_traction = true
 use_as_steering = true
 wheel_radius = 0.34
@@ -51,10 +52,9 @@ damping_compression = 3.0
 damping_relaxation = 4.0
 
 [node name="Sketchfab_Scene" parent="VehicleWheel3D2" unique_id=307335660 instance=ExtResource("3_lvl2k")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="VehicleWheel3D3" type="VehicleWheel3D" parent="." unique_id=1587698109]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.808, 0, -1.1304574)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.808, 0, 1.13)
 use_as_traction = true
 wheel_radius = 0.34
 suspension_stiffness = 50.0
@@ -62,10 +62,9 @@ damping_compression = 3.0
 damping_relaxation = 4.0
 
 [node name="Sketchfab_Scene" parent="VehicleWheel3D3" unique_id=1505013366 instance=ExtResource("3_lvl2k")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="VehicleWheel3D4" type="VehicleWheel3D" parent="." unique_id=649723613]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.808, 0, -1.1304574)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.808, 0, 1.13)
 use_as_traction = true
 wheel_radius = 0.34
 suspension_stiffness = 50.0
@@ -73,9 +72,10 @@ damping_compression = 3.0
 damping_relaxation = 4.0
 
 [node name="Sketchfab_Scene" parent="VehicleWheel3D4" unique_id=833091324 instance=ExtResource("3_lvl2k")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
 [node name="EngineSfx" type="AudioStreamPlayer3D" parent="." unique_id=1570776699]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.084684014, -1.0464635)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.084684014, 1.1549158)
 stream = ExtResource("4_tshw1")
 unit_size = 24.0
 max_db = 6.0

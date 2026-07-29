@@ -27,16 +27,16 @@ texture_filter = 0
 [node name="Example" type="Node3D" unique_id=1311716753]
 
 [node name="Car" parent="." unique_id=58163010 instance=ExtResource("1_1lw2r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.33, -8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.44194907, 17)
 engine_start = true
 
 [node name="CarCamera" type="SpringArm3D" parent="." unique_id=1494704968]
-transform = Transform3D(0.99999994, 0, 0, 0, 0.98480767, -0.17364818, 0, 0.17364816, 0.9848077, 0, 1, -8)
-spring_length = -4.0
+transform = Transform3D(0.99999994, 0, 0, 0, 0.9848076, 0.17364816, 0, -0.17364816, 0.98480767, 0, 1, -8)
+spring_length = 4.0
 script = ExtResource("2_w3862")
 
 [node name="Camera3D" type="Camera3D" parent="CarCamera" unique_id=1336539228]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1131319062]
 environment = SubResource("Environment_g7b7a")
@@ -109,11 +109,11 @@ mesh = SubResource("BoxMesh_g7b7a")
 size = Vector3(50, 0, 50)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Example" unique_id=1336044326]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 50)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -50)
 size = Vector3(8, 0, 50)
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Example" unique_id=1837164310]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 575)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -575.001)
 size = Vector3(1000, 0, 1000)
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="Example" unique_id=1913297854]
@@ -122,27 +122,27 @@ height = 8.0
 sides = 16
 
 [node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Example" unique_id=26710991]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, -0.3, 2)
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, -0.3, -2)
 height = 8.0
 sides = 16
 
 [node name="CSGCylinder3D3" type="CSGCylinder3D" parent="Example" unique_id=1989327698]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, -0.3, 4)
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, -0.3, -4)
 height = 8.0
 sides = 16
 
 [node name="CSGCylinder3D4" type="CSGCylinder3D" parent="Example" unique_id=807602026]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, -0.3, 6)
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, -0.3, -6)
 height = 8.0
 sides = 16
 
 [node name="CSGCylinder3D5" type="CSGCylinder3D" parent="Example" unique_id=2095218404]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, -0.3, 8)
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, -0.3, -8)
 height = 8.0
 sides = 16
 
 [node name="CSGCylinder3D6" type="CSGCylinder3D" parent="Example" unique_id=1476372336]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, -0.3, 10)
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, -0.3, -10)
 height = 8.0
 sides = 16
 
